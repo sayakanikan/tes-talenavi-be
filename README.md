@@ -8,15 +8,15 @@
 
 ### Endpoints
 #### Movies
-GET    /api/movies          => Get All Movies
-POST   /api/movies          => Create Movie
-GET    /api/movies/{id}     => Get Movie By Id
-PUT    /api/movies/{id}     => Update Movie By Id
-DELETE  /api/movies/{id}    => Delete Movie By Id
+1. GET    /api/movies          => Get All Movies
+2. POST   /api/movies          => Create Movie
+3. GET    /api/movies/{id}     => Get Movie By Id
+4. PUT    /api/movies/{id}     => Update Movie By Id
+5. DELETE  /api/movies/{id}    => Delete Movie By Id
 
 #### Genres
-GET    /api/genres          => Get All Genres
-POST   /api/genres          => Create Genres
-GET    /api/genres/{id}     => Get Genres By Id
-PUT    /api/genres/{id}     => Update Genres By Id
-DELETE  /api/genres/{id}    => Delete Genres By Id
+1. GET    /api/genres          => Get All Genres
+2. POST   /api/genres          => Create Genres
+3. GET    /api/genres/{id}     => Get Genres By Id
+4. PUT    /api/genres/{id}     => Update Genres By Id
+5. DELETE  /api/genres/{id}    => Delete Genres By Id
