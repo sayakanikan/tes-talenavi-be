@@ -1,18 +1,14 @@
 package talenavi.tes_talenavi_be.controller;
 
 import org.springframework.http.HttpStatus;
-import talenavi.tes_talenavi_be.entity.Genre;
 import talenavi.tes_talenavi_be.entity.Movie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import talenavi.tes_talenavi_be.model.MovieRequest;
 import talenavi.tes_talenavi_be.model.MovieResponse;
-import talenavi.tes_talenavi_be.service.GenreService;
 import talenavi.tes_talenavi_be.service.MovieService;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/api/movies")
@@ -24,8 +20,8 @@ public class MovieController {
   }
 
   @GetMapping
-  public List<Movie> getAll() {
-    return movieService.getAll();
+  public List<Movie> getAll(@RequestParam(required = false) String title) {
+    return movieService.getAll(title);
   }
 
   @GetMapping("/{id}")

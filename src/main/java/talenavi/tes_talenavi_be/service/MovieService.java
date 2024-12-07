@@ -22,8 +22,15 @@ public class MovieService {
     this.genreRepository = genreRepository;
   }
 
-  public List<Movie> getAll() {
-    return movieRepository.findAll();
+  public List<Movie> getAll(String title) {
+    List<Movie> movies;
+    if (title != null && !title.isEmpty()) {
+      movies = movieRepository.findByTitleContainingIgnoreCase(title);
+    } else {
+      movies = movieRepository.findAll();
+    }
+
+    return movies;
   }
 
   public Movie getById(int id) {
